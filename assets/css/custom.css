@@ -51,7 +51,7 @@
   position: relative;
 }
 
-.music-toggle-wrapper button.sound.is-paused:before {
+.music-toggle-wrapper button.sound.is-playing:before {
   content: '';
   display: block;
   background-color: #585858;
@@ -64,6 +64,6 @@
   top: 0;
   z-index: 1;
 }
-.music-toggle-wrapper button.sound.is-paused:hover:before {
+.music-toggle-wrapper button.sound.is-playing:hover:before {
   background-color: #f2849e;
 }

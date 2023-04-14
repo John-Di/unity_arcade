@@ -225,7 +225,7 @@
 							function toggleMusic(){
 								var music = document.getElementById("music");
 								var toggle = document.querySelector("#music + button");
-								toggle.classList.toggle("is-paused", music.paused);
+								toggle.classList.toggle("is-playing", !music.paused);
 								if(music.paused) {
 									music.fastSeek(0);
 									music.play();
@@ -237,7 +237,7 @@
 						<audio loop id="music"
 							src="plaza_music.mp3">
 						</audio>
-						<button class="sound is-paused" onclick="toggleMusic()">
+						<button class="sound is-playing" onclick="toggleMusic()">
 						</button>
 					</aside>
 
