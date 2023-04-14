@@ -1,1 +1,1 @@
-# Basic HTML5 Exercise
+# Basic HTML5 Exercise for hosting unity projects
