@@ -9,6 +9,7 @@
 		<title>Phantom by HTML5 UP</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/custom.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -23,7 +24,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.jpg" alt="" /></span><span class="title">John Di Girolamo</span>
+									<span class="avatar"><img src="images/logo.jpg" alt="avatar" /></span><span class="title">John Di Girolamo</span>
 								</a>
 
 							<!-- Nav -->
@@ -217,6 +218,28 @@
 							</section>
 						</div>
 					</div>
+
+				<!-- Util -->
+					<aside class="music-toggle-wrapper">
+						<script>
+							function toggleMusic(){
+								var music = document.getElementById("music");
+								var toggle = document.querySelector("#music + button");
+								toggle.classList.toggle("is-paused", music.paused);
+								if(music.paused) {
+									music.fastSeek(0);
+									music.play();
+								} else {
+									music.pause();
+								}
+							}
+						</script>
+						<audio loop id="music"
+							src="plaza_music.mp3">
+						</audio>
+						<button class="sound is-paused" onclick="toggleMusic()">
+						</button>
+					</aside>
 
 				<!-- Footer -->
 					<footer id="footer">

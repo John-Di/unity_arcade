@@ -15,3 +15,55 @@
 .tiles article.style7 > .image:after {
   content: unset;
 }
+
+#header .logo .avatar {
+  margin-right: 0.65em;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+#header .logo .avatar img {
+  display: block;
+  width: 2em;
+  height: 2em;
+}
+
+.music-toggle-wrapper {
+  display: flex;
+  padding: 1em;
+  position: fixed;
+  pointer-events: none;
+  top: 20px;
+  left: 20px;
+  z-index: 4;
+}
+
+.music-toggle-wrapper button.sound {
+  background-color: white;
+  background-image: url('../../images/speaker.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  border-radius: 50%;
+  height: 0;
+  padding-top: 100%;
+  pointer-events: auto;
+  position: relative;
+}
+
+.music-toggle-wrapper button.sound.is-paused:before {
+  content: '';
+  display: block;
+  background-color: #585858;
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  top: 0;
+  z-index: 1;
+}
+.music-toggle-wrapper button.sound.is-paused:hover:before {
+  background-color: #f2849e;
+}
