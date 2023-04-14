@@ -1,0 +1,17 @@
+.tiles article > .image img {
+  height: 320px;
+}
+
+.tiles article.style7 > .image img {
+  object-position: center;
+  object-fit: cover;
+}
+
+.tiles article.style7 > .image:before {
+  background-color: #222;
+  opacity: 0.5;
+}
+
+.tiles article.style7 > .image:after {
+  content: unset;
+}
